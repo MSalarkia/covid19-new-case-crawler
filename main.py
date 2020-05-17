@@ -5,6 +5,10 @@ import matplotlib.pyplot as plt
 
 
 class COVID19:
+    '''
+        this class crawls all covid 19 new cases and death cases of all countries in a time-series from
+        the official world health organization website: https://www.worldometers.info/coronavirus/
+    '''
     def __init__(self):
         self.main_page_url = 'https://www.worldometers.info/coronavirus/'
         self._country_data = None
@@ -35,6 +39,11 @@ class COVID19:
         return self._country_zero_pad_cases
 
     def crawl(self, *, top_n_countries=10):
+        '''
+        main crawler function
+        :param top_n_countries: the number of countries you wish to crawl
+        :return: dictionary of country data
+        '''
         if self.country_data is not None:
             return self.country_data
 
