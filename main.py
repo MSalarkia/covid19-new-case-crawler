@@ -146,5 +146,8 @@ class COVID19:
 
 if __name__ == '__main__':
     covid = COVID19()
-    covid.crawl()
+    country_data = covid.crawl()
     covid.plot_cases()
+
+    print('\nAll Countries Data:\n\n')
+    print(country_data)
